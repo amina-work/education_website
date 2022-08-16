@@ -1,1 +1,252 @@
-/*# sourceMappingURL=style.css.map */
+/* Variables */
+/* Globals */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  color: #fff;
+  background-color: #1f2641;
+}
+body .container {
+  width: 80%;
+  margin: 0 auto;
+}
+body section {
+  padding: 6rem 0;
+}
+body section h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+body h1, body h2, body h3, body h4, body h5 {
+  line-height: 1.2;
+}
+body h1 {
+  font-size: 2.4rem;
+}
+body h2 {
+  font-size: 2rem;
+}
+body h3 {
+  font-size: 1.6rem;
+}
+body h4 {
+  font-size: 1.3rem;
+}
+body a {
+  color: #fff;
+}
+body img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: all 400ms ease-in-out;
+}
+body .btn:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+body .btn-primary {
+  background: #f75842;
+  color: #fff;
+}
+
+/* Navbar */
+.window-scroll {
+  background: #6c63ff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  background: transparent;
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+
+.nav button {
+  display: none;
+}
+.nav__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.nav__menu a {
+  font-size: 0.9rem;
+  transition: all 400ms ease-in-out;
+}
+.nav__menu a:hover {
+  color: #424890;
+}
+
+/* Header */
+.header {
+  position: relative;
+  top: 5rem;
+  overflow: hidden;
+  height: 70vh;
+  margin-bottom: 5rem;
+}
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+  height: 100%;
+}
+.header__left p {
+  margin: 1rem 0 2.4rem;
+}
+
+/* Categories */
+.categories {
+  background: #2e3267;
+  height: 29rem;
+}
+.categories__container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.categories__left {
+  margin-right: 4rem;
+}
+.categories__left h1 {
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+.categories__left p {
+  margin: 1rem 0 3rem;
+}
+.categories__right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.categories__right .category {
+  background: #424890;
+  padding: 2rem;
+  border-radius: 2rem;
+  transition: all 400ms ease-in-out;
+}
+.categories__right .category:hover {
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.categories__right .category:nth-child(2) .category__icon {
+  background: #f75842;
+}
+.categories__right .category:nth-child(3) .category__icon {
+  background: #00bf8e;
+}
+.categories__right .category:nth-child(4) .category__icon {
+  background: #f7c94b;
+}
+.categories__right .category:nth-child(5) .category__icon {
+  background: #00bf8e;
+}
+.categories__right .category__icon {
+  background: #6c63ff;
+  padding: 0.7rem;
+  border-radius: 0.9rem;
+}
+.categories__right .category h5 {
+  margin: 2rem 0 1rem;
+}
+.categories__right .category p {
+  font-size: 0.85rem;
+}
+
+/* Popular Courses */
+.courses {
+  margin-top: 10rem;
+}
+.courses__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.courses__container .course {
+  background: #2e3267;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all 400ms ease-in-out;
+}
+.courses__container .course:hover {
+  background: transparent;
+  border-color: #6c63ff;
+}
+.courses__container .course__image img {
+  height: 200px;
+}
+.courses__container .course__info {
+  padding: 2rem;
+}
+.courses__container .course__info p {
+  margin: 1.2rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+/* Faqs */
+.faqs {
+  background: #2e3267;
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.faqs__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.faqs__container .faq {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #6c63ff;
+  cursor: pointer;
+}
+.faqs__container .faq__icon {
+  align-self: flex-start;
+  font-size: 1.2rem;
+}
+.faqs__container .faq .question__answer h4 {
+  font-size: 0.9rem;
+  line-height: 2.2;
+}
+.faqs__container .faq .question__answer p {
+  margin-top: 0.8rem;
+  display: none;
+}
+.faqs__container .faq.open p {
+  display: block;
+}/*# sourceMappingURL=style.css.map */

@@ -2,3 +2,318 @@
 @import "contact";
 @import "courses";
 @import "home";
+
+/* Variables */
+$primaryClr: #6c63ff;
+$successClr: #00bf8e;
+$warningClr: #f7c94b;
+$dangerClr: #f75842;
+$dangerVariantClr: rgba(247, 88, 66, 0.4);
+$whiteClr: #fff;
+$lightClr: rgba(255, 255, 255, 0.7);
+$blackClr: #000;
+$bgClr: #1f2641;
+$bg1Clr: #2e3267;
+$bg2Clr: #424890;
+
+$longWidth: 80%;
+$middleWidth: 90%;
+$smallWidth: 94%;
+
+$transition: all 400ms ease-in-out;
+
+/* Globals */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    color: $whiteClr;
+    background-color: $bgClr;
+
+    .container{ //this is a shared class used to center all pages of website
+        width: $longWidth;
+        margin: 0 auto;
+    }
+    
+    section{
+        padding: 6rem 0; //6 times 60px
+    
+        h2{
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+    }
+
+    h1, h2, h3, h4, h5 {
+        line-height: 1.2;
+    }
+
+    h1{font-size: 2.4rem;}
+    h2{font-size: 2rem;}
+    h3{font-size: 1.6rem;}
+    h4{font-size: 1.3rem;}
+
+    a{
+        color: $whiteClr;
+    }
+
+    img{
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    .btn{
+        display: inline-block;
+        background-color: $whiteClr;
+        color: $blackClr;
+        padding: 1rem 2rem;
+        border: 1px solid transparent;
+        font-weight: 500;
+        transition: $transition;
+
+        &:hover{
+            background: transparent;
+            color: $whiteClr;
+            border-color: $whiteClr;
+        }
+    }
+
+    .btn-primary{
+        background: $dangerClr;
+        color: $whiteClr;
+    }
+}
+
+/* Navbar */
+.window-scroll{
+    background: $primaryClr;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+
+nav{
+    background: transparent;
+    width: 100vw; //entire width of screen no matter device
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+.nav{
+    button{
+        display: none;
+    }
+
+    &__container{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+
+        a{
+            font-size: 0.9rem;
+            transition: $transition;
+
+            &:hover{
+                color: $bg2Clr;
+            }
+        }
+    }
+}
+
+/* Header */
+.header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 5rem;
+
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 5rem;
+        height: 100%;
+    }
+
+    &__left{
+        p{
+            margin: 1rem 0 2.4rem;
+        }
+    }
+}
+
+/* Categories */
+.categories{
+    background: $bg1Clr;
+    height: 29rem;
+
+    &__container{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    &__left{
+        margin-right: 4rem;
+
+        h1{
+            line-height: 1;
+            margin-bottom: 3rem;
+        }
+
+        p{
+            margin: 1rem 0 3rem;
+        }
+    }
+
+    &__right{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+
+        .category{
+            background: $bg2Clr;
+            padding: 2rem;
+            border-radius: 2rem;
+            transition: $transition;
+
+            &:hover{
+                box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+                z-index: 1;
+            }
+
+            &:nth-child(2){
+                .category__icon{
+                    background: $dangerClr;
+                }
+            }
+            &:nth-child(3){
+                .category__icon{
+                    background: $successClr;
+                }
+            }
+            &:nth-child(4){
+                .category__icon{
+                    background: $warningClr;
+                }
+            }
+            &:nth-child(5){
+                .category__icon{
+                    background: $successClr;
+                }
+            }
+
+            &__icon{
+                background: $primaryClr;
+                padding: 0.7rem;
+                border-radius: 0.9rem;
+            }
+
+            h5{
+                margin: 2rem 0 1rem;
+            }
+
+            p{
+                font-size: 0.85rem;
+            }
+        }
+    }
+}
+
+/* Popular Courses */
+.courses{
+    margin-top: 10rem;
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        .course{
+            background: $bg1Clr;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: $transition;
+
+            &:hover{
+                background: transparent;
+                border-color: $primaryClr;
+            }
+
+            &__image{
+                img{
+                    height: 200px;
+                }
+            }
+
+            &__info{
+                padding: 2rem;
+                p{
+                    margin: 1.2rem 0 2rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+/* Faqs */
+.faqs{
+    background: $bg1Clr;
+    box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
+
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        .faq{
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            height: fit-content;
+            background: $primaryClr;
+            cursor: pointer;
+
+            &__icon{
+                align-self: flex-start;
+                font-size: 1.2rem;
+            }
+
+            .question__answer{
+                h4{
+                    font-size: 0.9rem;
+                    line-height: 2.2;
+                }
+                p{
+                    margin-top: 0.8rem;
+                    display: none;
+                }
+            }
+
+            &.open{
+                p{
+                    display: block;
+                }
+            }
+        }
+    }
+}
