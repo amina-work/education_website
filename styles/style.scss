@@ -1,26 +1,8 @@
+@import "variables"; //variables file always upfront
 @import "about"; 
 @import "contact";
 @import "courses";
 @import "home";
-
-/* Variables */
-$primaryClr: #6c63ff;
-$successClr: #00bf8e;
-$warningClr: #f7c94b;
-$dangerClr: #f75842;
-$dangerVariantClr: rgba(247, 88, 66, 0.4);
-$whiteClr: #fff;
-$lightClr: rgba(255, 255, 255, 0.7);
-$blackClr: #000;
-$bgClr: #1f2641;
-$bg1Clr: #2e3267;
-$bg2Clr: #424890;
-
-$longWidth: 80%;
-$middleWidth: 90%;
-$smallWidth: 94%;
-
-$transition: all 400ms ease-in-out;
 
 /* Globals */
 *{
@@ -399,6 +381,13 @@ nav{
         gap: 1rem;
         font-size: 1.2rem;
         margin-top: 2rem;
+        li{
+            border: 1px solid transparent;
+            border-radius: 50%;
+            &:hover{
+                border-color: $whiteClr;
+            }
+        }
     }
 
     &__copyright{

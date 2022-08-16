@@ -1,4 +1,103 @@
-/* Variables */
+/* Variables */ /* Acheivements */
+.about-achievements {
+  margin-top: 3rem;
+}
+.about-achievements__container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 5rem;
+}
+.about-achievements__right > p {
+  margin: 1.6rem 0 2.5rem;
+}
+.about-achievements__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.about-achievements__cards .card {
+  background: #2e3267;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 400ms ease-in-out;
+}
+.about-achievements__cards .card p {
+  margin-top: 1rem;
+}
+.about-achievements__cards .card:hover {
+  background: #424890;
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+.about-achievements__cards .card__icon {
+  background: #f75842;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.about-achievements__cards .card:nth-child(2) .card__icon {
+  background: #00bf8e;
+}
+.about-achievements__cards .card:nth-child(3) .card__icon {
+  background: #6c63ff;
+}
+
+/* Team */
+.about-team {
+  background: #2e3267;
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.about-team__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.about-team__member {
+  background: #424890;
+  padding: 2rem;
+  border: 1px solid transparent;
+  transition: all 400ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.about-team__member:hover {
+  background: transparent;
+  border-color: #6c63ff;
+}
+.about-team__member:hover img {
+  filter: saturate(1);
+}
+.about-team__member:hover .about-team__member-socials {
+  right: 0%;
+}
+.about-team__member-image img {
+  filter: saturate(0);
+}
+.about-team__member-info * {
+  text-align: center;
+  margin-top: 1.4rem;
+}
+.about-team__member-info p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.about-team__member-socials {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  background: #6c63ff;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+  transition: all 400ms ease-in-out;
+}
+.about-team__member-socials a {
+  padding: 1rem;
+}
+
 /* Globals */
 * {
   margin: 0;
@@ -316,6 +415,13 @@ nav {
   gap: 1rem;
   font-size: 1.2rem;
   margin-top: 2rem;
+}
+.footer__socials li {
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.footer__socials li:hover {
+  border-color: #fff;
 }
 .footer__copyright {
   text-align: center;

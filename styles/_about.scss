@@ -1,0 +1,128 @@
+/* Acheivements */
+.about-achievements{
+    margin-top: 3rem;
+
+    &__container{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 5rem;
+    }
+
+    &__right{
+        > p{
+            margin: 1.6rem 0 2.5rem;
+        }
+    }
+
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+
+        .card{
+            background: $bg1Clr;
+            padding: 1.6rem;
+            border-radius: 1rem;
+            text-align: center;
+            transition: $transition;
+
+            p{
+                margin-top: 1rem;
+            }
+
+            &:hover{
+                background: $bg2Clr;
+                box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
+            }
+
+            &__icon{
+                background: $dangerClr;
+                padding: 0.6rem;
+                border-radius: 1rem;
+                display: inline-block;
+                margin-bottom: 2rem;
+                font-size: 2rem;
+            }
+
+            &:nth-child(2){
+                .card__icon{
+                    background: $successClr;
+                }
+            }
+            &:nth-child(3){
+                .card__icon{
+                    background: $primaryClr;
+                }
+            }
+        }
+    }
+}
+
+
+/* Team */
+.about-team{
+    background: $bg1Clr;
+    box-shadow: inset 0 0 3rem rgba(0,0,0,0.5);
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    &__member{
+        background: $bg2Clr;
+        padding: 2rem;
+        border: 1px solid transparent;
+        transition: $transition;
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+            background: transparent;
+            border-color: $primaryClr;
+
+            img{
+                filter: saturate(1);
+            }
+
+            .about-team__member-socials{
+                right: 0%;
+            }
+        }
+    }
+
+    &__member-image{
+        img{
+            filter: saturate(0);
+        }
+    }
+
+    &__member-info{
+        *{
+            text-align: center;
+            margin-top: 1.4rem;
+        }
+
+        p{
+            color: $lightClr;
+        }
+    }
+
+    &__member-socials{
+        position: absolute;
+        top: 50%;
+        right: -100%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        background: $primaryClr;
+        border-radius: 1rem 0 0 1rem;
+        box-shadow: -2rem 0 2rem rgba(0,0,0,0.3);
+        transition: $transition;
+    
+        a{
+            padding: 1rem;
+        }
+    }
+}
