@@ -126,3 +126,60 @@
         }
     }
 }
+
+/*   Media Queries   */
+@media screen and (max-width: 1024px) { //tablets
+    .about-achievements{
+        margin-top: 2rem;
+
+
+        &__container{
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        &__left{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        &__right{
+            text-align: center;
+        }
+    }
+
+    .about-team{
+
+        &__container{
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        &__member{
+            padding: 1rem;
+        }
+
+    }
+}
+
+@media screen and (max-width: 600px){ //phones
+    .about-achievements{
+        &__cards{
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem;
+        }
+    }
+    .about-team{
+        &__container{
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem;
+        }
+        &__member{
+            padding: 0;
+
+            p{
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

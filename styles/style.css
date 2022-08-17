@@ -98,6 +98,46 @@
   padding: 1rem;
 }
 
+/*   Media Queries   */
+@media screen and (max-width: 1024px) {
+  .about-achievements {
+    margin-top: 2rem;
+  }
+  .about-achievements__container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .about-achievements__left {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about-achievements__right {
+    text-align: center;
+  }
+  .about-team__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .about-team__member {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about-achievements__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+  .about-team__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+  .about-team__member {
+    padding: 0;
+  }
+  .about-team__member p {
+    margin-bottom: 1.5rem;
+  }
+}
 /* Globals */
 * {
   margin: 0;
